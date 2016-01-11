@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FuturaLight.ttf">
+            <string>FuturaLight</string>
+            <string>FuturaLight</string>
+            <string>FuturaLight</string>
+            <string>FuturaLight</string>
+            <string>FuturaLight</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="whereAmI" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +26,158 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ufC-kT-0TJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="886-Es-fBj"/>
+                                    <constraint firstAttribute="height" constant="177" id="g0V-m2-htD"/>
+                                    <constraint firstAttribute="height" constant="177" id="gFo-wh-gDe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="886-Es-fBj"/>
+                                        <exclude reference="g0V-m2-htD"/>
+                                    </mask>
+                                </variation>
+                            </mapView>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cR4-Ar-tyd">
+                                <rect key="frame" x="178" y="185" width="219" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your current location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBy-9g-XjS">
+                                        <rect key="frame" x="0.0" y="0.0" width="219" height="15"/>
+                                        <fontDescription key="fontDescription" name="FuturaLight" family="Futura (Light)" pointSize="13"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="guA-ZD-Lfb">
+                                        <rect key="frame" x="0.0" y="25" width="219" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="37.78583400" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZB7-mG-6oJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="95" height="20"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="122.40641700" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaH-mZ-shy">
+                                                <rect key="frame" x="115" y="0.0" width="104" height="20"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address line 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evG-it-Nu2">
+                                        <rect key="frame" x="0.0" y="55" width="219" height="19"/>
+                                        <fontDescription key="fontDescription" name="FuturaLight" family="Futura (Light)" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address line 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqo-qZ-rxH">
+                                        <rect key="frame" x="0.0" y="84" width="219" height="19"/>
+                                        <fontDescription key="fontDescription" name="FuturaLight" family="Futura (Light)" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="places near me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlU-Yg-eWs">
+                                        <rect key="frame" x="0.0" y="113" width="219" height="15"/>
+                                        <fontDescription key="fontDescription" name="FuturaLight" family="Futura (Light)" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="evG-it-Nu2" secondAttribute="trailing" id="4do-N0-7zv"/>
+                                    <constraint firstAttribute="trailing" secondItem="dlU-Yg-eWs" secondAttribute="trailing" id="AqD-Vp-iha"/>
+                                    <constraint firstItem="rBy-9g-XjS" firstAttribute="leading" secondItem="cR4-Ar-tyd" secondAttribute="leading" id="bP4-Dt-vpp"/>
+                                    <constraint firstItem="lqo-qZ-rxH" firstAttribute="leading" secondItem="cR4-Ar-tyd" secondAttribute="leading" id="dHV-XI-9ul"/>
+                                    <constraint firstItem="dlU-Yg-eWs" firstAttribute="leading" secondItem="cR4-Ar-tyd" secondAttribute="leading" id="k3Y-kD-BFL"/>
+                                    <constraint firstAttribute="trailing" secondItem="lqo-qZ-rxH" secondAttribute="trailing" id="kI2-ZK-2QR"/>
+                                    <constraint firstItem="evG-it-Nu2" firstAttribute="leading" secondItem="cR4-Ar-tyd" secondAttribute="leading" id="rSc-Gx-MDA"/>
+                                    <constraint firstAttribute="trailing" secondItem="rBy-9g-XjS" secondAttribute="trailing" id="uj5-0q-Ud5"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gathering your location data...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elX-48-u4H">
+                                <rect key="frame" x="-66" y="185" width="236" height="21"/>
+                                <fontDescription key="fontDescription" name="FuturaLight" family="Futura (Light)" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlK-PY-T7N">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="0.74921875000000004" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="dZB-3E-Y7O"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading Places..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="VZm-OV-EOe">
+                                <rect key="frame" x="178" y="335" width="219" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="219" id="H0m-K7-bJe"/>
+                                    <constraint firstAttribute="width" constant="219" id="POI-Um-gxQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="VKU-Yq-3dh"/>
+                                    <constraint firstAttribute="height" constant="140" id="aeF-Il-pgD"/>
+                                    <constraint firstAttribute="height" constant="40" id="mnk-VP-i8a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="POI-Um-gxQ"/>
+                                        <exclude reference="VKU-Yq-3dh"/>
+                                        <exclude reference="mnk-VP-i8a"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9565104166666667" green="0.9565104166666667" blue="0.9565104166666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ufC-kT-0TJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4ve-DB-mgd"/>
+                            <constraint firstItem="VZm-OV-EOe" firstAttribute="top" secondItem="cR4-Ar-tyd" secondAttribute="bottom" constant="20" id="6ve-20-KbT"/>
+                            <constraint firstItem="VZm-OV-EOe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AUF-65-hJN"/>
+                            <constraint firstItem="cR4-Ar-tyd" firstAttribute="top" secondItem="ufC-kT-0TJ" secondAttribute="bottom" constant="10" id="DWR-mQ-hYt"/>
+                            <constraint firstItem="cR4-Ar-tyd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F7R-u9-SeT"/>
+                            <constraint firstItem="ufC-kT-0TJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KXz-f2-bhB"/>
+                            <constraint firstItem="elX-48-u4H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NPU-3o-xwX"/>
+                            <constraint firstItem="qlK-PY-T7N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QKg-en-uBB"/>
+                            <constraint firstItem="elX-48-u4H" firstAttribute="top" secondItem="ufC-kT-0TJ" secondAttribute="bottom" constant="20" id="SBN-xf-sq0"/>
+                            <constraint firstItem="ufC-kT-0TJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="SPZ-VH-RxF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ufC-kT-0TJ" secondAttribute="trailing" id="ePs-68-1RM"/>
+                            <constraint firstItem="ufC-kT-0TJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="fsP-c6-HQ7"/>
+                            <constraint firstItem="ufC-kT-0TJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gP0-l2-res"/>
+                            <constraint firstAttribute="trailing" secondItem="qlK-PY-T7N" secondAttribute="trailing" id="oup-iQ-bDN"/>
+                            <constraint firstItem="ufC-kT-0TJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pYO-e3-ef4"/>
+                            <constraint firstItem="qlK-PY-T7N" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pfD-bM-Q6V"/>
+                            <constraint firstAttribute="trailing" secondItem="ufC-kT-0TJ" secondAttribute="trailing" id="qEO-Ll-U1H"/>
+                            <constraint firstAttribute="trailing" secondItem="ufC-kT-0TJ" secondAttribute="trailing" id="ucC-op-QDD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4ve-DB-mgd"/>
+                                <exclude reference="SPZ-VH-RxF"/>
+                                <exclude reference="ePs-68-1RM"/>
+                                <exclude reference="fsP-c6-HQ7"/>
+                                <exclude reference="gP0-l2-res"/>
+                                <exclude reference="qEO-Ll-U1H"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="addressLine1Label" destination="evG-it-Nu2" id="Viq-Zj-HyW"/>
+                        <outlet property="addressLine2Label" destination="lqo-qZ-rxH" id="b3S-Vq-8OJ"/>
+                        <outlet property="addressStackView" destination="cR4-Ar-tyd" id="ATX-5e-MxD"/>
+                        <outlet property="latitudeLabel" destination="ZB7-mG-6oJ" id="MPd-as-gOt"/>
+                        <outlet property="loadingLabel" destination="elX-48-u4H" id="1wk-pI-Afh"/>
+                        <outlet property="longitudeLabel" destination="WaH-mZ-shy" id="FeF-Hn-J3J"/>
+                        <outlet property="map" destination="ufC-kT-0TJ" id="W8x-vp-USN"/>
+                        <outlet property="placeTitleLabel" destination="dlU-Yg-eWs" id="W4K-Xn-4rC"/>
+                        <outlet property="placesLabel" destination="VZm-OV-EOe" id="Jfr-Wv-nl8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="822" y="659"/>
         </scene>
     </scenes>
 </document>

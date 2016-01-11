@@ -15,6 +15,10 @@
 		C03345401C40509500680C46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C033453E1C40509500680C46 /* LaunchScreen.storyboard */; };
 		C033454B1C40509500680C46 /* whereAmITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C033454A1C40509500680C46 /* whereAmITests.swift */; };
 		C03345561C40509500680C46 /* whereAmIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03345551C40509500680C46 /* whereAmIUITests.swift */; };
+		C03345681C405A2900680C46 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = C03345641C405A2900680C46 /* BebasNeue.otf */; };
+		C03345691C405A2900680C46 /* FuturaLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C03345651C405A2900680C46 /* FuturaLight.ttf */; };
+		C033456A1C405A2900680C46 /* Roboto-BoldCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C03345661C405A2900680C46 /* Roboto-BoldCondensed.ttf */; };
+		C033456B1C405A2900680C46 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C03345671C405A2900680C46 /* Roboto-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		C03345511C40509500680C46 /* whereAmIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whereAmIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03345551C40509500680C46 /* whereAmIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whereAmIUITests.swift; sourceTree = "<group>"; };
 		C03345571C40509500680C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C03345641C405A2900680C46 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
+		C03345651C405A2900680C46 /* FuturaLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FuturaLight.ttf; sourceTree = "<group>"; };
+		C03345661C405A2900680C46 /* Roboto-BoldCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldCondensed.ttf"; sourceTree = "<group>"; };
+		C03345671C405A2900680C46 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		C03345311C40509500680C46 /* whereAmI */ = {
 			isa = PBXGroup;
 			children = (
+				C03345631C4059EF00680C46 /* Fonts */,
 				C03345321C40509500680C46 /* AppDelegate.swift */,
 				C03345341C40509500680C46 /* ViewController.swift */,
 				C03345361C40509500680C46 /* Main.storyboard */,
@@ -126,6 +135,17 @@
 				C03345571C40509500680C46 /* Info.plist */,
 			);
 			path = whereAmIUITests;
+			sourceTree = "<group>";
+		};
+		C03345631C4059EF00680C46 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C03345641C405A2900680C46 /* BebasNeue.otf */,
+				C03345651C405A2900680C46 /* FuturaLight.ttf */,
+				C03345661C405A2900680C46 /* Roboto-BoldCondensed.ttf */,
+				C03345671C405A2900680C46 /* Roboto-Light.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +252,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C03345691C405A2900680C46 /* FuturaLight.ttf in Resources */,
 				C03345401C40509500680C46 /* LaunchScreen.storyboard in Resources */,
 				C033453D1C40509500680C46 /* Assets.xcassets in Resources */,
+				C03345681C405A2900680C46 /* BebasNeue.otf in Resources */,
+				C033456B1C405A2900680C46 /* Roboto-Light.ttf in Resources */,
+				C033456A1C405A2900680C46 /* Roboto-BoldCondensed.ttf in Resources */,
 				C03345381C40509500680C46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

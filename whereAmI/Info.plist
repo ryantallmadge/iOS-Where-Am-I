@@ -43,5 +43,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need access to your location to tell where you are</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FuturaLight.ttf</string>
+	</array>
 </dict>
 </plist>
